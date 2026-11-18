@@ -1,0 +1,9 @@
+.DS_Store
+configuration.php
+*.sql
+*.sql.gz
+*.zip
+*.jpa
+*.jps
+work/
+outputs/
