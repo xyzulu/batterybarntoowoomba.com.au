@@ -1,0 +1,140 @@
+# Legacy Joomla URL redirects for the static Battery Barn Toowoomba site.
+# Place this file in the Apache document root beside index.html.
+# GitHub Pages does not process .htaccess files.
+
+DirectoryIndex index.html
+RewriteEngine On
+RewriteBase /
+
+# Product detail routes (Joomla SEF URLs, with or without index.php).
+RewriteRule ^(?:index\.php/)?products/vehicle-batteries/?$ /#vehicle-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/solar-panels/?$ /#solar-panels [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/mobile-phone-batteries/?$ /#everyday-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/marine-batteries/?$ /#marine-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/machinery-batteries/?$ /#machinery-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/house-everyday-batteries/?$ /#everyday-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/caravan-motoring-batteries/?$ /#caravan-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/chargers-accessories/?$ /#everyday-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/battery-brands/?$ /#products [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/lawn-mower-batteries/?$ /#motorbike-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-05-54-06/?$ /#vehicle-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-29-02-22-08/?$ /#solar-panels [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-05-55-16/?$ /#everyday-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-05-55-41/?$ /#marine-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-05-55-57/?$ /#machinery-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-05-56-17/?$ /#everyday-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-05-56-36/?$ /#caravan-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-29-00-29-17/?$ /#everyday-batteries [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-07-01-03-55-17/?$ /#products [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?products/?$ /#products [R=301,L,NE,NC]
+
+# Service detail routes.
+RewriteRule ^(?:index\.php/)?services/free-battery-check/?$ /#free-battery-check [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/custom-battery-installation/?$ /#custom-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/24-hr-roadside-assistance/?$ /#roadside-assistance [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/waeco-refrigeration-repairs/?$ /#mobile-phone-waeco [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/accessory-installations/?$ /#custom-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/mobile-phone-batteries-repairs/?$ /#mobile-phone-waeco [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/free-battery-installation/?$ /#free-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/battery-terminal-replacement/?$ /#custom-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-31-27/?$ /#free-battery-check [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-31-48/?$ /#custom-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-32-03/?$ /#roadside-assistance [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-32-19/?$ /#mobile-phone-waeco [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-32-34/?$ /#custom-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-32-49/?$ /#mobile-phone-waeco [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-33-08/?$ /#free-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?2015-06-26-03-33-26/?$ /#custom-battery-installation [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?services/?$ /#services [R=301,L,NE,NC]
+
+# Other Joomla pages and short aliases.
+RewriteRule ^(?:index\.php/)?about-us-battery-barn/?$ /#about [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?faq-s/?$ /#faqs [R=301,L,NE,NC]
+RewriteRule ^(?:index\.php/)?contact/?$ /#contact [R=301,L,NE,NC]
+RewriteRule ^home/?$ / [R=301,L,NE,NC]
+
+# Legacy non-SEF Joomla article links (?option=com_content&view=article&id=...).
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=(39|38|36|35|34|33|23|24|51)(&|$) [NC]
+RewriteRule ^index\.php$ /#products [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=25(&|$) [NC]
+RewriteRule ^index\.php$ /#free-battery-check [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=(26|29|32)(&|$) [NC]
+RewriteRule ^index\.php$ /#custom-battery-installation [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=27(&|$) [NC]
+RewriteRule ^index\.php$ /#roadside-assistance [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=(28|30)(&|$) [NC]
+RewriteRule ^index\.php$ /#mobile-phone-waeco [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=31(&|$) [NC]
+RewriteRule ^index\.php$ /#free-battery-installation [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=49(&|$) [NC]
+RewriteRule ^index\.php$ /#products [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=50(&|$) [NC]
+RewriteRule ^index\.php$ /#services [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=55(&|$) [NC]
+RewriteRule ^index\.php$ /#faqs [R=301,L,NE,QSD]
+
+# FAQ articles, About Us, and the old contact form URL.
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=(54|56|57|58|59|60|61|62|63|64)(&|$) [NC]
+RewriteRule ^index\.php$ /#faqs [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=category(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=18(&|$) [NC]
+RewriteRule ^index\.php$ /#about [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_content(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=article(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=22(&|$) [NC]
+RewriteRule ^index\.php$ /#about [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)option=com_contact(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)view=contact(&|$) [NC]
+RewriteCond %{QUERY_STRING} (^|&)id=2(&|$) [NC]
+RewriteRule ^index\.php$ /#contact [R=301,L,NE,QSD]
+
+# Legacy menu-item links that use only ?Itemid=.
+RewriteCond %{QUERY_STRING} (^|&)Itemid=(166|186|187|189|190|191|192|193|194|195|197|198|199|200|201|202|203|207|208)(&|$) [NC]
+RewriteRule ^index\.php$ /#products [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)Itemid=(167|170|171|172|173|174|175|176|177|178|179|180|181|182|183|184|185)(&|$) [NC]
+RewriteRule ^index\.php$ /#services [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)Itemid=168(&|$) [NC]
+RewriteRule ^index\.php$ /#faqs [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)Itemid=209(&|$) [NC]
+RewriteRule ^index\.php$ /#about [R=301,L,NE,QSD]
+
+RewriteCond %{QUERY_STRING} (^|&)Itemid=165(&|$) [NC]
+RewriteRule ^index\.php$ /#contact [R=301,L,NE,QSD]
+
+# Home page and unknown legacy Joomla query URLs.
+RewriteRule ^index\.php/?$ / [R=301,L,NE,QSD]

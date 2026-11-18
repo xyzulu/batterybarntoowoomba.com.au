@@ -8,3 +8,4 @@
 .hero-photo{position:absolute;z-index:2;width:84%;height:60%;object-fit:cover;right:2%;bottom:82px;border-radius:46% 46% 4px 4px;border:8px solid var(--cream);box-shadow:0 16px 32px #142a3920}
 .art-label{z-index:3}.product-card{padding:14px 14px 23px;min-height:316px}.product-photo{width:100%;height:116px;object-fit:cover;margin:12px 0 13px;border-radius:2px;mix-blend-mode:multiply}.card-dark .product-photo{mix-blend-mode:normal}.product-card h3{font-size:17px}.product-card p{font-size:10px}.card-arrow{right:14px;bottom:14px}
 @media(max-width:650px){.brand-logo{width:130px}.brand-name small{font-size:7px}.hero-photo{width:88%;height:61%;right:0;bottom:54px;border-width:6px}.art-label{left:43px;top:71px}.art-label b{font-size:18px}.product-card{min-height:270px;padding:15px 13px 20px}.product-photo{height:100px;margin:10px 0 12px}.product-card h3{font-size:15px}.product-card p{font-size:10px}}
+:root{--red:#bc282e}

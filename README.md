@@ -10,6 +10,8 @@ Open `index.html` in a browser, or serve the folder with any static file server.
 
 This can be hosted from a GitHub repository with GitHub Pages, or on any static hosting provider. The domain `batterybarntoowoomba.com.au` can then point to the published site. Before launch, confirm the domain/DNS access and set up HTTPS at the host.
 
+The included `.htaccess` maps the old Joomla SEF and common non-SEF URLs to the matching sections in the new one-page site. It works on Apache hosting; GitHub Pages does not read `.htaccess`, so use the hosting provider's redirect configuration if publishing there.
+
 ## Before launch
 
 - Confirm the contact number, 24-hour roadside availability and current rates.
